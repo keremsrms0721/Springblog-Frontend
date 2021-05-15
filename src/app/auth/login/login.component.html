@@ -1,0 +1,11 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div class="input-group">
+    <label for="">Username</label>
+    <input type="text" class="form-control" #username="ngModel" [(ngModel)]="loginPayload.username" name="username" required placeholder="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group">
+    <label for="">Password</label>
+    <input type="password" class="form-control" #password="ngModel" [(ngModel)]="loginPayload.password" name="password" required  placeholder="Password" aria-describedby="basic-addon1">
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>

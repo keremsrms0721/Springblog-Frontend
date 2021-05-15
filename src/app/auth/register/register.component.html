@@ -1,0 +1,20 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div class="input-group">
+    <label for="">Username</label>
+    <input type="text" class="form-control" #username="ngModel" [(ngModel)]="registerPayload.username" name="username" required placeholder="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group">
+    <label for="">Email</label>
+    <input type="text" class="form-control" #email="ngModel" [(ngModel)]="registerPayload.email"  name="email" required placeholder="Email" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group">
+    <label for="">Password</label>
+    <input type="password" class="form-control" #password="ngModel"  [(ngModel)]="registerPayload.password" name="password" required placeholder="Password" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group">
+    <label for="">Confirm password</label>
+    <input type="password" class="form-control" #confirmPassword="ngModel" [(ngModel)]="registerPayload.confirmPassword"  name="confirmPassword" required placeholder="Confirm password" aria-describedby="basic-addon1">
+  </div>
+  {{registerPayload.email}}
+  <button class="btn btn-primary" type="submit">Sign up</button>
+</form>
